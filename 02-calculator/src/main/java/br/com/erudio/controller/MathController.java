@@ -23,9 +23,7 @@ public class MathController {
 			throw new UnsuportedMathOperationException("Por favor defina um valor numerico");
 		}
 		//Passa-se o numero convertido e retorna o resultado
-		return math.sum(numberConverter.convertToDouble(numberOne), numberConverter.convertToDouble(numberTwo)); 
-		
-		
+		return math.sum(numberConverter.convertToDouble(numberOne), numberConverter.convertToDouble(numberTwo)); 		
 	}
 	
 	//subtração

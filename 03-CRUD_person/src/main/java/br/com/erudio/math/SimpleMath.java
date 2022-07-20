@@ -6,21 +6,25 @@ public class SimpleMath {
 	// metodo de soma
 	public Double sum(Double fristNumber, Double secondNumber) {
 		return fristNumber + secondNumber;
+
 	}
 
 	// metodo de subtração
 	public Double subtracao(Double fristNumber, Double secondNumber) {
 		return fristNumber - secondNumber;
+
 	}
 
 	// metodo de multiplicação
 	public Double multiplicacao(Double fristNumber, Double secondNumber) {
 		return fristNumber * secondNumber;
+
 	}
 
 	// método de divisão
 	public Double divisao(Double fristNumber, Double secondNumber) {
 		return fristNumber / secondNumber;
+
 	}
 
 	// metodo de media
