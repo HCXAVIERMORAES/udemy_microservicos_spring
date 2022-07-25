@@ -1,0 +1,22 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: erudio-config-server
+ #busca as configuraçoes do arquivo local
+  #profiles:
+    #active:
+    #- native
+ #busca a configuração no github
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/leandrocgsi/erudio-config-server #caminho copiado do repositorio 
+          #username: nome do usuario
+          #password: senha se privado repositorio
+          default-label: main #(obrigatorio)
+          search-paths:
+          - 'greeting-service*'
+          #'nome da pasta que estão as configurações com * ex
+          
