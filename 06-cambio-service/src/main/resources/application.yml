@@ -25,19 +25,18 @@ spring:
 #configuração para postgreSQL
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/cambio_service?userTimezone=true&serveTimezone=UTC
+    url: jdbc:postgresql://localhost:5432/cambio_service
     username: postgres
     password: Bel2107
   jpa:
     hibernate:
-      ddl-auto: update    
-    show-sql: true    
+      ddl-auto: none    
     properties:
       hibernate:
-       dialect: org.hibernate.dialect.PostgreSQL81Dialect
-  flyway:
-   url: jdbc:postgresql://localhost:5432/
-   schemas: cambio_service
-   user: postgres
-   password: Bel2107
+        dialect: org.hibernate.dialect.PostgreSQL92Dialect
+        jdbc:
+          lob:
+            non-contextual-creation: true
+    show-sql: false  
+  
 #trocar o scrip para o do postegre no migration

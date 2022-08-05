@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.erudio</groupId>
-	<artifactId>cambio-service</artifactId>
+	<artifactId>book-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>06-cambio-service</name>
+	<name>07-book-service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
@@ -22,49 +22,39 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+		<!-- dependencia JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 		<!--  
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 		-->
-		<!-- dependencia do JPA -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		
-		<!-- dependencia do BD mysql -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		
-		<!-- dependenciia do postgresql -->
-		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
-		<!-- dependecia para testar o postgre -->  
-		<dependency>
-		    <groupId>org.postgresql</groupId>
-		    <artifactId>postgresql</artifactId>
-		     <scope>runtime</scope>
-		   <!-- <version>42.4.0</version>-->
-		</dependency>
-		
-		
+
 		<!-- dependencia flywaydb -->	
 		<dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
 		</dependency>
 		
-
+		<!-- dependecia do feifn Rest Client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -89,18 +79,17 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			
-			<!-- retirado da resposta doo professor -->
+			<!-- retirado da resposta do professor (troca-se o nomme do serviço ou projeto) -->
 			<plugin>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-maven-plugin</artifactId>
 			<configuration>
-				<url>jdbc:postgresql://localhost:5432/cambio_service?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false</url>
+				<url>jdbc:postgresql://localhost:5432/book_service?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false</url>
 				<user>postgres</user>
 				<password>Bel2107</password>
 			</configuration>
 		</plugin>
-		
+			
 		</plugins>
 	</build>
 
