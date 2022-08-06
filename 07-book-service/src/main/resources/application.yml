@@ -1,6 +1,10 @@
 #adicionando a porta e nome da aplicação
 server:
  port: 8100
+eureka:
+ client:
+    service-url:
+      defalteZone: http://localhost:8761/eureka #caminho do eureka 
 spring:
   application:
     name: book-service

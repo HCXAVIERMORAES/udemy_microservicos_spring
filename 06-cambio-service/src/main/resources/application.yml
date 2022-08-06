@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: cambio-service
+ #configuração do eureka
+      
   #propriedade de config para bd MySQL
   #datasource:
     #driver-class-name: com.mysql.cj.jdbc.Driver 
@@ -37,6 +39,11 @@ spring:
         jdbc:
           lob:
             non-contextual-creation: true
-    show-sql: false  
+    show-sql: false 
+  
+eureka:
+  client:
+    service-url:
+      defalteZone: http://localhost:8761/eureka #caminho do eureka 
   
 #trocar o scrip para o do postegre no migration
