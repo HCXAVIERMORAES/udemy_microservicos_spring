@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import br.com.erudio.response.Cambio;
 
 //adiciona a anotação de feign
-@FeignClient(name="cambio-service",url="localhost:8000")
+//@FeignClient(name="cambio-service",url="localhost:8000")//com o eureka rodando retirado a url
+@FeignClient(name="cambio-service")
 public interface CambioProxy {
 	
 	//copiado o metodo do cambio-service e passar o caminho

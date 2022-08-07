@@ -1,0 +1,17 @@
+server:
+  port: 8765
+#config do eureka
+eureka:
+ client:
+    service-url:
+      defalteZone: http://localhost:8761/eureka 
+#nome da aplicação
+spring:
+  application:
+    name: api-gateway 
+  #cloud:   #com ele comentado muda-se as URLs
+   # gateway:
+    #  discovery:
+     #   locator:
+      #    enabled: true  #para corrigir erro na pag q acessa o microserviço
+       #   lower-case-service-id: true #passa toda a url para minusculo
