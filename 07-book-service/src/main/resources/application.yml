@@ -6,6 +6,23 @@ eureka:
  client:
     service-url:
       defalteZone: http://localhost:8761/eureka 
+#configurações do resilience4j para as tentativas de conexoes
+resilience4j:
+  bulkhead:
+    instances:
+      default: 
+        max-concurrent-calls: 10 #instancias concorrentes
+  ratelimiter:
+    instances:
+      default:
+        limit-for-period: 2
+        limit-refresh-period: 10s #2requisições em 10 segundos
+  retry:
+    instances:
+      foo-bar:
+        max-attempts: 5
+        wait-duration: 1s
+        enable-exponential-backoff: true #usa com fibronate 1,2,5,9...
 spring:
   application:
     name: book-service
