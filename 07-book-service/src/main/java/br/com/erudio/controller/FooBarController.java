@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.github.resilience4j.bulkhead.annotation.Bulkhead;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 //para simular a erros e commo usar o resilece4j
+@Tag(name = "Foo Bar") //documentação
 @RestController 
 @RequestMapping("book-service")
 public class FooBarController {

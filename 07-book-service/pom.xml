@@ -44,6 +44,13 @@
 			<artifactId>flyway-core</artifactId>
 		</dependency>
 		
+		<!-- dependencia do swagger openAPI -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-webmvc-core</artifactId>
+			<version>1.5.7</version>
+		</dependency>
+		
 		<!-- dependecia do feifn Rest Client -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
