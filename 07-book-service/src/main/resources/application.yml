@@ -46,3 +46,10 @@ spring:
           lob:
             non-contextual-creation: true
     show-sql: true 
+    #para reslver problema de erro do caminho da url do loud balance
+#springdoc:
+  #api-docs:
+    #path: book-service/v3/api-docs
+  #show-actuator: true #expoem o actuator tbm
+  #padrão em que está no navegador v3/api-docs
+    

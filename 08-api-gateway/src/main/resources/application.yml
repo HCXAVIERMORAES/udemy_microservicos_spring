@@ -9,9 +9,25 @@ eureka:
 spring:
   application:
     name: api-gateway 
-  #cloud:   #com ele comentado muda-se as URLs
-   # gateway:
-    #  discovery:
-     #   locator:
-      #    enabled: true  #para corrigir erro na pag q acessa o microserviço
-       #   lower-case-service-id: true #passa toda a url para minusculo
+  cloud:   #com ele comentado muda-se as URLs
+    gateway:
+      discovery:
+        locator:
+          enabled: true  #para corrigir erro na pag q acessa o microserviço
+          #lower-case-service-id: true #passa toda a url para minusculo
+      routes:
+      - id: cambio-service
+        uri: lb://cambio-service
+        predicates:
+        - Path=/cambio-service/**
+      - id: book-service
+        uri: lb://book-service
+        predicates:
+        - Path=/book-service/**    #após configurar esse arquivo a classe java "ApiGatewayConfiguration" pode ser uxcluida 
+     # - id: openapi
+        #uri: lb://api-gateway 
+        #predicates:
+        #- Path=/v3/api-docs/**
+        #filters:
+        #- Rewritepath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs 
+        #regex  

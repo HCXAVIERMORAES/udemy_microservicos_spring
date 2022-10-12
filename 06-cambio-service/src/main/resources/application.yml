@@ -45,5 +45,11 @@ eureka:
   client:
     service-url:
       defalteZone: http://localhost:8761/eureka #caminho do eureka 
+#para reslver problema de erro do caminho da url do loud balance     
+#springdoc:
+ #api-docs:
+    #path: cambio-service/v3/api-docs
+  #padrão em que está no navegador v3/api-docs
+    
   
 #trocar o scrip para o do postegre no migration

@@ -50,6 +50,17 @@
 			<artifactId>springdoc-openapi-webmvc-core</artifactId>
 			<version>1.5.7</version>
 		</dependency>
+		<!-- dependencia do swagger openAPI iterface grafica -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.5.7</version>
+		</dependency>
+		<!-- adicionando dependencia para nao dar crash no swagger -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator-core</artifactId>
+		</dependency>
 		
 		<!-- dependecia do feifn Rest Client -->
 		<dependency>
